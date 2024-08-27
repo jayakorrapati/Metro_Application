@@ -12,7 +12,7 @@ public class ProfileService {
     private ProfileDao dao;
 
     public Profiledto saveService(Profiledto profiledto){
-return dao.saveDao(profiledto);
+        return dao.saveDao(profiledto);
     }
 
     public List<Profiledto> getallservice(){
@@ -22,8 +22,5 @@ return dao.saveDao(profiledto);
     public Optional<Profiledto> getbyidservice(int id){
         return dao.getbyidDao(id);
     }
-
-
-   
 
 }

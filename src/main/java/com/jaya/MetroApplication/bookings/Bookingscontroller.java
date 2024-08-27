@@ -1,4 +1,4 @@
-package com.jaya.MetroApplication.profile;
+package com.jaya.MetroApplication.bookings;
 
 import java.util.List;
 import java.util.Optional;
@@ -11,25 +11,26 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
 @RestController
-@RequestMapping("/profile")
-public class ProfileController {
+@RequestMapping("/bookings")
+public class Bookingscontroller {
     @Autowired
-    private ProfileService profileService;
+    private Bookingsservice bookingsservice;
 
     @PostMapping("/save")
-    public Profiledto saveController(@RequestBody Profiledto profiledto) {
-        return profileService.saveService(profiledto);
+    public Bookingsdto saveController(@RequestBody Bookingsdto bookingsdto) {
+        return bookingsservice.saveservice(bookingsdto);
     }
 
     @GetMapping("/all")
-    public List<Profiledto> getallControl() {
-        return profileService.getallservice();
+    public List<Bookingsdto> getallControl() {
+        return bookingsservice.getallservice();
     }
 
     @GetMapping("/{id}")
-    public Optional<Profiledto> getbyidControl(@PathVariable int id) {
-        return profileService.getbyidservice(id);
+    public Optional<Bookingsdto> getbyidControl(@PathVariable int id) {
+        return bookingsservice.getbyidservice(id);
     }
 
 }

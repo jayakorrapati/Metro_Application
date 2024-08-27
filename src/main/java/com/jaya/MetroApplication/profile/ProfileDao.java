@@ -24,6 +24,5 @@ public class ProfileDao {
         return profileRepo.findById(id);
     }
 
-   
 
 }
